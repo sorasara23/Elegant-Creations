@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paiement - Elegant Creations</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="payment2.css">
+</head>
+<body>
+    <div class="annonce">Livraison <span>GRATUITE</span> partout au Maroc</div>
+    <header>
+        <a href="#" class="logo"><i class='bx bxs-shopping-bag'></i>Elegant Creations</a>
+        <nav>
+            <ul class="navbar">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="produits.html">Produits</a></li>
+                <li><a href="about.html">A propos de nous</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-icon">
+            <i class='bx bx-search'></i>
+            <i class='bx bxs-cart-alt'><span>0</span></i>
+        </div>
+        <div class="bx bx-menu" id="menu-icon"></div>
+    </header>
+
+    <main>
+        <div class="payment-card">
+            <h2>Informations de Paiement</h2>
+            <form>
+                <div class="form-group">
+                    <label for="card-number">Numéro de Carte</label>
+                    <input type="text" id="card-number" placeholder="1234 5678 9012 3456" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="expiry-date">Date d'Expiration</label>
+                        <input type="text" id="expiry-date" placeholder="MM/AA" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cvv">CVV</label>
+                        <input type="text" id="cvv" placeholder="123" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="card-name">Nom sur la Carte</label>
+                    <input type="text" id="card-name" placeholder="John Doe" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Adresse de Facturation</label>
+                    <input type="text" id="address" placeholder="123 Rue Example" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="city">Ville</label>
+                        <input type="text" id="city" placeholder="Casablanca" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="zip">Code Postal</label>
+                        <input type="text" id="zip" placeholder="20000" required>
+                    </div>
+                </div>
+                <button type="submit" class="submit-btn">Payer Maintenant</button>
+            </form>
+            <div class="card-icons">
+                <i class='bx bxl-visa'></i>
+                <i class='bx bxl-mastercard'></i>
+                <i class='bx bxl-american-express'></i>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-box">
+            <a href="#" class="logo">
+                <i class='bx bxs-shopping-bag'></i>
+                Elegant Creations
+            </a>
+            <p>Votre destination pour des sacs à main élégants et raffinés.</p>
+            <div class="social">
+                <a href="#"><i class='bx bxl-facebook'></i></a>
+                <a href="#"><i class='bx bxl-twitter'></i></a>
+                <a href="#"><i class='bx bxl-instagram'></i></a>
+                <a href="#"><i class='bx bxl-youtube'></i></a>
+            </div>
+        </div>
+        <div class="footer-box">
+            <h3>Support</h3>
+            <ul>
+                <li><a href="produits.html">Produits</a></li>
+                <li><a href="Aide.html">Aide</a></li>
+                <li><a href="politiques-de-retour.html">Politique de retour</a></li>
+                <li><a href="conditions-utilisation.html">Conditions d'utilisation</a></li>
+            </ul>
+        </div>
+        <div class="footer-box">
+            <h3>Consulter les guides</h3>
+            <ul>
+                <li><a href="payment2.html">Paiements</a></li>
+                <li><a href="blogs.html">Nos blogs</a></li>
+                <li><a href="partenaires.html">Nos partenaires</a></li>
+                <li><a href="Achetez maintenent.html">Achetez maintenant</a></li>
+            </ul>
+        </div>
+        <div class="footer-box contact-info">
+            <h3>Contact</h3>
+            <p><i class='bx bxs-map'></i>123 Rue de la Mode, Casablanca</p>
+            <p><i class='bx bxs-phone'></i>+212 7 23 45 67 89</p>
+            <p><i class='bx bxs-envelope'></i>bag@elegantcreations.com</p>
+        </div>
+    </footer>
+</body>
+</html>

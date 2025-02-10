@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Partenaires - Elegant Creations</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <style>
+        :root {
+            --primary-color: #d6a9a9;
+            --secondary-color: #121011;
+            --accent-color: #f0e4d7;
+            --text-color: #333;
+            --background-color: #fff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            background-color: #fff;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+
+        .logo i {
+            margin-right: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        .navbar {
+            display: flex;
+            list-style-type: none;
+        }
+
+        .navbar li {
+            margin-left: 1.5rem;
+        }
+
+        .navbar a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            color: var(--primary-color);
+        }
+
+        .header-icon {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-icon i {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            margin-left: 1rem;
+            cursor: pointer;
+        }
+
+        h1, h2 {
+            font-family: 'Playfair Display', serif;
+            color: var(--secondary-color);
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .partner-card {
+            background-color: var(--accent-color);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .partner-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .partner-logo {
+            width: 150px;
+            height: 150px;
+            object-fit: contain;
+            margin-bottom: 15px;
+        }
+
+        .partner-name {
+            font-size: 1.2em;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .partner-description {
+            font-size: 0.9em;
+            color: var(--text-color);
+        }
+
+        footer {
+            background-color: #fff;
+            padding: 2rem 5%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            border-top: 1px solid #eee;
+        }
+
+        .footer-box h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        .footer-box ul {
+            list-style: none;
+        }
+
+        .footer-box ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-box a {
+            color: var(--text-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-box a:hover {
+            color: var(--primary-color);
+        }
+
+        .social {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social a i {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            transition: color 0.3s ease;
+        }
+
+        .social a i:hover {
+            color: var(--primary-color);
+        }
+
+        @media screen and (max-width: 768px) {
+            header {
+                flex-wrap: wrap;
+            }
+
+            .navbar {
+                width: 100%;
+                justify-content: center;
+                margin-top: 1rem;
+            }
+
+            .navbar li {
+                margin: 0 0.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><i class='bx bxs-shopping-bag'></i>Elegant Creations</a>
+        <ul class="navbar">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="produits.html">Produits</a></li>
+            <li><a href="about.html">À propos de nous</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="header-icon">
+            <i class='bx bx-search'></i>
+            <i class='bx bxs-cart-alt'></i>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Nos Partenaires</h1>
+        <div class="partners-grid">
+            <div class="partner-card">
+                <img src="https://images.unsplash.com/photo-1585314062340-f1a5a7c9328d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=150&h=150&q=80" alt="Logo Cuirs Maroc" class="partner-logo">
+                <h2 class="partner-name">Cuirs Maroc</h2>
+                <p class="partner-description">Fournisseur de cuirs de haute qualité pour nos sacs à main.</p>
+            </div>
+            <div class="partner-card">
+                <img src="https://images.unsplash.com/photo-1605518216938-7c31b7b14ad0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=150&h=150&q=80" alt="Logo Tissus Traditionnels" class="partner-logo">
+                <h2 class="partner-name">Tissus Traditionnels</h2>
+                <p class="partner-description">Spécialiste en tissus marocains pour nos doublures et finitions.</p>
+            </div>
+            <div class="partner-card">
+                <img src="https://images.unsplash.com/photo-1621939514649-280e2ee25f60?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=150&h=150&q=80" alt="Logo Artisans du Sud" class="partner-logo">
+                <h2 class="partner-name">Artisans du Sud</h2>
+                <p class="partner-description">Coopérative d'artisans spécialisés dans la broderie et les finitions.</p>
+            </div>
+            <div class="partner-card">
+                <img src="https://images.unsplash.com/photo-1605000797499-95a51c5269ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=150&h=150&q=80" alt="Logo Eco-Emballages" class="partner-logo">
+                <h2 class="partner-name">Eco-Emballages</h2>
+                <p class="partner-description">Fournisseur d'emballages écologiques pour nos produits.</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-box">
+            <a href="#" class="logo">
+                <i class='bx bxs-shopping-bag'></i>
+                Elegant Creations
+            </a>
+            <p>Votre destination pour des sacs à main élégants et raffinés.</p>
+            <div class="social">
+                <a href="#"><i class='bx bxl-facebook'></i></a>
+                <a href="#"><i class='bx bxl-twitter'></i></a>
+                <a href="#"><i class='bx bxl-instagram'></i></a>
+                <a href="#"><i class='bx bxl-youtube'></i></a>
+            </div>
+        </div>
+        <div class="footer-box">
+            <h3>Support</h3>
+            <ul>
+                <li><a href="produits.html">Produits</a></li>
+                <li><a href="Aide.html">Aide</a></li>
+                <li><a href="politiques-de-retour.html">Politique de retour</a></li>
+                <li><a href="conditions-utilisation.html">Conditions d'utilisation</a></li>
+            </ul>
+        </div>
+        <div class="footer-box">
+            <h3>Consulter les guides</h3>
+            <ul>
+                <li><a href="payment2.html">Paiements</a></li>
+                <li><a href="blogs.html">Nos blogs</a></li>
+                <li><a href="partenaires.html">Nos partenaires</a></li>
+                <li><a href="Achetez maintenent.html">Achetez maintenant</a></li>
+            </ul>
+        </div>
+        <div class="footer-box contact-info">
+            <h3>Contact</h3>
+            <p><i class='bx bxs-map'></i>123 Rue de la Mode, Casablanca</p>
+            <p><i class='bx bxs-phone'></i>+212 5 22 00 00 00</p>
+            <p><i class='bx bxs-envelope'></i>contact@elegantcreations.ma</p>
+        </div>
+    </footer>
+</body>
+</html>

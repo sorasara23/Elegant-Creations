@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aide - Elegant Creations</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+        :root {
+            --primary-color: #d6a9a9;
+            --secondary-color: #121011;
+            --accent-color: #f0e4d7;
+            --text-color: #333;
+            --background-color: #fff;
+        }
+        
+        * {
+            font-family: "Poppins", sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+            scroll-padding-top: 4rem;
+            list-style: none;
+            text-decoration: none;
+        }
+
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .head {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        header{
+            position: relative;
+            width: 100%;
+            top: 10;
+            right: 0;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 1000;
+            padding: 18px 100px;
+        }
+
+        .annonce {
+            background-color: #121011;
+            color: #fff;
+            padding: 0.5rem;
+            text-align: center;
+        }
+
+        .annonce span {
+            color: #d6a9a9;
+            font-weight: bold;
+        }
+
+        .logo{
+            display: flex;
+            align-items: center;
+            column-gap: 0.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #121011;
+            text-transform: uppercase;
+        }
+        .logo .bx{
+            font-size: 24px;
+            color: #d6a9a9;
+        }
+
+        .navbar{
+            display: flex;
+        }
+        .navbar a{
+            padding: 8px 17px;
+            color: #121011;
+            font-size: 1rem;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+        .navbar a:hover{
+            color: #d6a9a9b4;
+        }
+        #menu-icon{
+            font-size: 24px;
+            color: #121011;
+            z-index: 10001;
+            cursor: pointer;
+            display: none;
+        }
+        .header-icon{
+            font-size: 20px;
+            cursor: pointer;
+            z-index: 1000;
+            display: flex;
+            column-gap: 0.8rem;
+            align-items: center;
+        }
+        .header-icon .bx{
+            color: #fff;
+            padding: 7px;
+            background: #d6a9a9;
+            border-radius: 0.9rem;
+        }
+        .header-icon .bx:hover{
+            background: #d6a9a9b4;
+        }
+        .header-icon i{
+            position: relative;
+        }
+        .header-icon span{
+            position: absolute;
+            top: -7px;
+            right: -7px;
+            width: 18px;
+            height: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: #121011;
+            color: #fff;
+            font-size: 0.6rem;
+            font-weight: 500;
+        }
+
+        .search-box{
+            position: relative;
+            width: 200px;
+            box-shadow: 0 0 16px 1px rgb(14 52 54 / 15%);
+        }
+        .search-box input{
+            border: none;
+            outline: none;
+            width: 100%;
+            font-size: 1rem;
+            padding: 0px;
+            color: #d6a9a9;
+        }
+        .search-box input::placeholder{
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .head {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .head::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 3px;
+            background-color: var(--primary-color);
+            margin: 20px auto;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            color: var(--secondary-color);
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .cta-section {
+            text-align: center;
+            margin-top: 60px;
+            padding: 40px;
+            background-color: var(--accent-color);
+            border-radius: 10px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: var(--primary-color);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: var(--secondary-color);
+        }
+        footer {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 2rem;
+            padding: 4rem 2rem;
+        }
+
+        .footer-box {
+            padding: 1rem;
+        }
+
+        .footer-box .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.5rem;
+            color: #333;
+            text-decoration: none;
+            margin-bottom: 1rem;
+        }
+
+        .footer-box ul {
+            list-style: none;
+        }
+
+        .footer-box ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-box a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-box a:hover {
+            color: #d6a9a9;
+        }
+
+        .social {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social a i {
+            font-size: 20px;
+            padding: 10px;
+            background: #fff;
+            border-radius: 50%;
+            transition: all 0.3s;
+        }
+
+        .social a i:hover {
+            background: #d6a9a9;
+            color: #fff;
+        }
+
+        .contact-info p {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        @media (max-width: 991px) {
+        header {
+            padding: 20px;
+        }
+
+        .navbar {
+            display: none;
+        }
+
+        .navbar.active {
+            right: 0;
+        }
+
+        .navbar a {
+            display: block;
+            padding: 10px;
+            margin: 5px 0;
+        }
+
+        #menu-icon {
+            display: initial;
+        }
+
+        .search-box {
+            display: none;
+        }
+
+        ul.navbar {
+            position: absolute;
+            z-index: 200;
+            box-shadow: 2px 2px 0 #BEBEBE;
+            width: 35%;
+            display:none;
+        }
+        
+        ul.navbar li {
+            float: none;
+            margin: 0;
+        }
+        
+        ul.navbar li a {
+            border-bottom: 1px dotted #ccc;
+            border-right: none;
+            color: #000;
+            padding: 15px 30px;
+        }
+        
+        ul.navbar li a:hover {
+            color: #d6a9a9;
+            background: #eeeeee;
+        }
+        
+        ul.primary li:hover ul {
+            display: block;
+            background: #fff;
+        }
+
+        .footer {
+            grid-template-columns: 1fr;
+            text-align: center;
+        }
+
+        .social {
+            justify-content: center;
+        }
+        }
+
+        /* Ajouts pour la page Aide */
+        .faq-section {
+            margin-top: 40px;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+        }
+
+        .faq-item h3 {
+            font-size: 1.2em;
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+        }
+
+        .faq-item p {
+            font-size: 1em;
+            color: var(--text-color);
+        }
+/* 
+        .contact-form {
+            margin-top: 40px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact-form button {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: var(--secondary-color);
+        } */
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><i class='bx bxs-shopping-bag'></i>Elegant Creations</a>
+        <div class="wrap">
+            <span class="decor"></span>
+            <nav>
+              <ul class="primary">
+                    <li>
+                        <a href="#"><i class='bx bx-menu' id="menu-icon"></i></a>
+                        <ul class="navbar">
+                            <li><a href="#home">Acceuil</a></li>
+                            <li><a href="#products">Produits</a></li>
+                            <li><a href="#about">A propos de nous</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="search-box">
+            <input type="search" placeholder="Search here...">
+        </div>
+        <div class="header-icon">
+            <i class='bx bx-search' ></i>
+            <i class='bx bxs-cart-alt' ><span>0</span></i>
+        </div>
+    </header>
+    <div class="container">
+        <div class="head">
+            <h1>Aide</h1>
+            <p class="subtitle">Nous sommes toujours là pour vous aider.</p>
+        </div>
+
+        <!-- Section FAQ -->
+        <div class="faq-section">
+            <h2>Questions fréquentes</h2>
+            <div class="faq-item">
+                <h3>Comment passer une commande ?</h3>
+                <p>Pour passer une commande, ajoutez les articles à votre panier et suivez les étapes de paiement.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Quels sont les modes de livraison disponibles ?</h3>
+                <p>Nous proposons la livraison standard et express. Les délais de livraison varient selon votre région.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Comment retourner un produit ?</h3>
+                <p>Contactez-nous via la page "Contact" pour initier un retour. Veuillez conserver l'emballage d'origine.</p>
+            </div>
+        </div>
+
+        <!-- Section Contact -->
+        <!-- <div class="contact-form">
+            <h2>Contactez-nous</h2>
+            <form action="#" method="post">
+                <input type="text" name="name" placeholder="Votre nom" required>
+                <input type="email" name="email" placeholder="Votre email" required>
+                <textarea name="message" placeholder="Votre message" rows="5" required></textarea>
+                <button type="submit">Envoyer</button>
+            </form>
+        </div> -->
+
+        <!-- Section CTA -->
+        <div class="cta-section">
+            <h2>Besoin de plus d'aide ?</h2>
+            <p>Notre équipe est là pour vous aider à tout moment. Contactez-nous pour toute question supplémentaire.</p>
+            <a href="contact.html" class="cta-button">Contactez-nous</a>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-box">
+            <a href="#" class="logo">
+                <i class='bx bxs-shopping-bag'></i>
+                Elegant Creations
+            </a>
+            <p>Votre destination pour des sacs à main élégants et raffinés.</p>
+            <div class="social">
+                <a href="#"><i class='bx bxl-facebook'></i></a>
+                <a href="#"><i class='bx bxl-twitter'></i></a>
+                <a href="#"><i class='bx bxl-instagram'></i></a>
+                <a href="#"><i class='bx bxl-youtube'></i></a>
+            </div>
+        </div>
+        <div class="footer-box">
+            <h3>Support</h3>
+            <ul>
+                <li><a href="produits.html">Produits</a></li>
+                <li><a href="Aide.html">Aide</a></li>
+                <li><a href="politiques-de-retour.html">Politique de retour</a></li>
+                <li><a href="conditions-utilisation.html">Conditions d'utilisation</a></li>
+            </ul>
+        </div>
+        <div class="footer-box">
+            <h3>Consulter les guides</h3>
+            <ul>
+                <li><a href="payment2.html">Paiements</a></li>
+                <li><a href="blogs.html">Nos blogs</a></li>
+                <li><a href="partenaires.html">Nos partenaires</a></li>
+                <li><a href="Achetez maintenent.html">Achetez maintenant</a></li>
+            </ul>
+        </div>
+        <div class="footer-box contact-info">
+            <h3>Contact</h3>
+            <p><i class='bx bxs-map'></i>123 Rue de la Mode, Casablanca</p>
+            <p><i class='bx bxs-phone'></i>+212 7 23 45 67 89</p>
+            <p><i class='bx bxs-envelope'></i>bag@elegantcreations.com</p>
+        </div>
+    </footer>
+</body>
+</html>

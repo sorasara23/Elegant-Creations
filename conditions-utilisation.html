@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditions d'Utilisation - Elegant Creations</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+        :root {
+            --primary-color: #d6a9a9;
+            --secondary-color: #121011;
+            --accent-color: #f0e4d7;
+            --text-color: #333;
+            --background-color: #fff;
+        }
+        
+        * {
+            font-family: "Poppins", sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+            scroll-padding-top: 4rem;
+            list-style: none;
+            text-decoration: none;
+        }
+
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .head {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        header{
+            position: relative;
+            width: 100%;
+            top: 10;
+            right: 0;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 1000;
+            padding: 18px 100px;
+        }
+
+        .annonce {
+            background-color: #121011;
+            color: #fff;
+            padding: 0.5rem;
+            text-align: center;
+        }
+
+        .annonce span {
+            color: #d6a9a9;
+            font-weight: bold;
+        }
+
+        .logo{
+            display: flex;
+            align-items: center;
+            column-gap: 0.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #121011;
+            text-transform: uppercase;
+        }
+        .logo .bx{
+            font-size: 24px;
+            color: #d6a9a9;
+        }
+
+
+
+        .navbar{
+            display: flex;
+        }
+        .navbar a{
+            padding: 8px 17px;
+            color: #121011;
+            font-size: 1rem;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+        .navbar a:hover{
+            color: #d6a9a9b4;
+        }
+        #menu-icon{
+            font-size: 24px;
+            color: #121011;
+            z-index: 10001;
+            cursor: pointer;
+            display: none;
+        }
+        .header-icon{
+            font-size: 20px;
+            cursor: pointer;
+            z-index: 1000;
+            display: flex;
+            column-gap: 0.8rem;
+            align-items: center;
+        }
+        .header-icon .bx{
+            color: #fff;
+            padding: 7px;
+            background: #d6a9a9;
+            border-radius: 0.9rem;
+        }
+        .header-icon .bx:hover{
+            background: #d6a9a9b4;
+        }
+        .header-icon i{
+            position: relative;
+        }
+        .header-icon span{
+            position: absolute;
+            top: -7px;
+            right: -7px;
+            width: 18px;
+            height: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: #121011;
+            color: #fff;
+            font-size: 0.6rem;
+            font-weight: 500;
+        }
+
+        .search-box{
+            position: relative;
+            width: 200px;
+            box-shadow: 0 0 16px 1px rgb(14 52 54 / 15%);
+        }
+        .search-box input{
+            border: none;
+            outline: none;
+            width: 100%;
+            font-size: 1rem;
+            padding: 0px;
+            color: #d6a9a9;
+        }
+        .search-box input::placeholder{
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .head {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .head::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 3px;
+            background-color: var(--primary-color);
+            margin: 20px auto;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            color: var(--secondary-color);
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            color: var(--primary-color);
+        }
+
+        .terms-nav {
+            background-color: var(--accent-color);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 40px;
+        }
+
+        .terms-nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .terms-nav li {
+            margin: 10px;
+        }
+
+        .terms-nav a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .terms-nav a:hover {
+            color: var(--primary-color);
+        }
+
+        .terms-section {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+
+        .terms-section h2 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+
+        .terms-section p {
+            margin-bottom: 15px;
+        }
+
+        .terms-section ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .highlight-box {
+            background-color: var(--accent-color);
+            border-left: 4px solid var(--primary-color);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 10px 10px 0;
+        }
+
+        .highlight-box h3 {
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+        }
+
+        .accordion {
+            background-color: var(--accent-color);
+            color: var(--secondary-color);
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            text-align: left;
+            border: none;
+            outline: none;
+            transition: 0.4s;
+            font-weight: 600;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .accordion:hover {
+            background-color: #e6d8cb;
+        }
+
+        .panel {
+            padding: 0 18px;
+            background-color: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+        }
+
+        .accordion:after {
+            content: '\02795';
+            font-size: 13px;
+            color: var(--primary-color);
+            float: right;
+            margin-left: 5px;
+        }
+
+        .active:after {
+            content: "\2796";
+        }
+
+        .cta-section {
+            text-align: center;
+            margin-top: 60px;
+            padding: 40px;
+            background-color: var(--accent-color);
+            border-radius: 10px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: var(--primary-color);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: var(--secondary-color);
+        }
+        footer {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 2rem;
+            padding: 4rem 2rem;
+        }
+
+        .footer-box {
+            padding: 1rem;
+        }
+
+        .footer-box .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.5rem;
+            color: #333;
+            text-decoration: none;
+            margin-bottom: 1rem;
+        }
+
+        .footer-box ul {
+            list-style: none;
+        }
+
+        .footer-box ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-box a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-box a:hover {
+            color: #d6a9a9;
+        }
+
+        .social {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social a i {
+            font-size: 20px;
+            padding: 10px;
+            background: #fff;
+            border-radius: 50%;
+            transition: all 0.3s;
+        }
+
+        .social a i:hover {
+            background: #d6a9a9;
+            color: #fff;
+        }
+
+        .contact-info p {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        @media (max-width: 991px) {
+        header {
+            padding: 20px;
+        }
+
+        .navbar {
+            display: none;
+        }
+
+        .navbar.active {
+            right: 0;
+        }
+
+        .navbar a {
+            display: block;
+            padding: 10px;
+            margin: 5px 0;
+        }
+
+        #menu-icon {
+            display: initial;
+        }
+
+        .search-box {
+            display: none;
+        }
+
+        
+
+        ul.navbar {
+            position: absolute;
+            z-index: 200;
+            box-shadow: 2px 2px 0 #BEBEBE;
+            width: 35%;
+            display:none;
+        }
+        
+        ul.navbar li {
+            float: none;
+            margin: 0;
+        }
+        
+        ul.navbar li a {
+            border-bottom: 1px dotted #ccc;
+            border-right: none;
+            color: #000;
+            padding: 15px 30px;
+        }
+        
+        ul.navbar li a:hover {
+            color: #d6a9a9;
+            background: #eeeeee;
+        }
+        
+        ul.primary li:hover ul {
+            display: block;
+            background: #fff;
+        }
+
+
+        .footer {
+            grid-template-columns: 1fr;
+            text-align: center;
+        }
+
+        .social {
+            justify-content: center;
+        }
+        }
+
+
+
+        @media (max-width: 768px) {
+            .terms-nav ul {
+                flex-direction: column;
+            }
+
+            .terms-nav li {
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><i class='bx bxs-shopping-bag'></i>Elegant Creations</a>
+        <div class="wrap">
+            <span class="decor"></span>
+            <nav>
+              <ul class="primary">
+                    <li>
+                        <a href="#"><i class='bx bx-menu' id="menu-icon"></i></a>
+                        <ul class="navbar">
+                            <li><a href="index.html">Acceuil</a></li>
+                            <li><a href="produits.html">Produits</a></li>
+                            <li><a href="A propos de nous.html">A propos de nous</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="search-box">
+            <input type="search" placeholder="Search here...">
+        </div>
+        <div class="header-icon">
+            <i class='bx bx-search' ></i>
+            <i class='bx bxs-cart-alt' ><span>0</span></i>
+        </div>
+    </header>
+    <div class="container">
+        <dic class="head">
+            <h1>Conditions d'Utilisation</h1>
+            <p class="subtitle">Merci de lire attentivement nos conditions d'utilisation</p>
+        </div>
+
+        <nav class="terms-nav">
+            <ul>
+                <li><a href="#utilisation">Utilisation du Site</a></li>
+                <li><a href="#compte">Compte Utilisateur</a></li>
+                <li><a href="#propriete">Propriété Intellectuelle</a></li>
+                <li><a href="#responsabilite">Responsabilité</a></li>
+                <li><a href="#modifications">Modifications</a></li>
+            </ul>
+        </nav>
+
+        <section id="utilisation" class="terms-section">
+            <h2>1. Utilisation du Site</h2>
+            <p>En utilisant notre site, vous acceptez de vous conformer à ces conditions d'utilisation. Vous vous engagez à utiliser notre site de manière légale et éthique.</p>
+            <div class="highlight-box">
+                <h3>Important :</h3>
+                <p>L'utilisation de notre site à des fins illégales ou non autorisées est strictement interdite.</p>
+            </div>
+        </section>
+
+        <section id="compte" class="terms-section">
+            <h2>2. Compte Utilisateur</h2>
+            <p>Lors de la création d'un compte, vous acceptez de :</p>
+            <ul>
+                <li>Fournir des informations exactes et complètes</li>
+                <li>Maintenir la confidentialité de votre mot de passe</li>
+                <li>Être responsable de toutes les activités effectuées sous votre compte</li>
+            </ul>
+        </section>
+
+        <section id="propriete" class="terms-section">
+            <h2>3. Propriété Intellectuelle</h2>
+            <p>Tout le contenu présent sur notre site est protégé par les lois sur la propriété intellectuelle. Vous ne pouvez pas utiliser, reproduire ou distribuer notre contenu sans autorisation explicite.</p>
+        </section>
+
+        <section id="responsabilite" class="terms-section">
+            <h2>4. Responsabilité</h2>
+            <button class="accordion">Limitation de Responsabilité</button>
+            <div class="panel">
+                <p>Nous ne sommes pas responsables des dommages directs, indirects, accessoires ou consécutifs résultant de votre utilisation ou de votre incapacité à utiliser notre site.</p>
+            </div>
+
+            <button class="accordion">Exactitude des Informations</button>
+            <div class="panel">
+                <p>Bien que nous nous efforcions de fournir des informations précises, nous ne garantissons pas l'exactitude, l'exhaustivité ou l'actualité de ces informations.</p>
+            </div>
+        </section>
+
+        <section id="modifications" class="terms-section">
+            <h2>5. Modifications des Conditions</h2>
+            <p>Nous nous réservons le droit de modifier ces conditions d'utilisation à tout moment. Les modifications prendront effet dès leur publication sur le site.</p>
+            <div class="highlight-box">
+                <h3>Conseil :</h3>
+                <p>Consultez régulièrement cette page pour rester informé des éventuelles modifications.</p>
+            </div>
+        </section>
+
+        <div class="cta-section">
+            <h2>Des questions sur nos conditions d'utilisation ?</h2>
+            <p>Notre équipe juridique est là pour vous aider à comprendre vos droits et responsabilités.</p>
+            <a href="contact.html" class="cta-button">Contactez-nous</a>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-box">
+            <a href="#" class="logo">
+                <i class='bx bxs-shopping-bag'></i>
+                Elegant Creations
+            </a>
+            <p>Votre destination pour des sacs à main élégants et raffinés.</p>
+            <div class="social">
+                <a href="#"><i class='bx bxl-facebook'></i></a>
+                <a href="#"><i class='bx bxl-twitter'></i></a>
+                <a href="#"><i class='bx bxl-instagram'></i></a>
+                <a href="#"><i class='bx bxl-youtube'></i></a>
+            </div>
+        </div>
+        <div class="footer-box">
+            <h3>Support</h3>
+            <ul>
+                <li><a href="produits.html">Produits</a></li>
+                <li><a href="Aide.html">Aide</a></li>
+                <li><a href="politiques-de-retour.html">Politique de retour</a></li>
+                <li><a href="conditions-utilisation.html">Conditions d'utilisation</a></li>
+            </ul>
+        </div>
+        <div class="footer-box">
+            <h3>Consulter les guides</h3>
+            <ul>
+                <li><a href="payment2.html">Paiements</a></li>
+                <li><a href="blogs.html">Nos blogs</a></li>
+                <li><a href="partenaires.html">Nos partenaires</a></li>
+                <li><a href="Achetez maintenent.html">Achetez maintenant</a></li>
+            </ul>
+        </div>
+        <div class="footer-box contact-info">
+            <h3>Contact</h3>
+            <p><i class='bx bxs-map'></i>123 Rue de la Mode, Casablanca</p>
+            <p><i class='bx bxs-phone'></i>+212 7 23 45 67 89</p>
+            <p><i class='bx bxs-envelope'></i>bag@elegantcreations.com</p>
+        </div>
+    </footer>
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+</body>
+</html>
