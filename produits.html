@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produits - Elegant Creations</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <style>
+        :root {
+            --primary-color: #d6a9a9;
+            --secondary-color: #121011;
+            --accent-color: #f0e4d7;
+            --text-color: #333;
+            --background-color: #fff;
+        }
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+        *{
+            font-family: "Poppins", sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+            scroll-padding-top: 4rem;
+            list-style: none;
+            text-decoration: none;
+        }
+        /*img{
+            width: 100%;
+        }*/
+        body{
+            color: #121011;
+        }
+        header{
+            position: relative;
+            width: 100%;
+            top: 10;
+            right: 0;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 1000;
+            padding: 18px 100px;
+        }
+
+        .annonce {
+            background-color: #121011;
+            color: #fff;
+            padding: 0.5rem;
+            text-align: center;
+        }
+
+        .annonce span {
+            color: #d6a9a9;
+            font-weight: bold;
+        }
+
+        .logo{
+            display: flex;
+            align-items: center;
+            column-gap: 0.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #121011;
+            text-transform: uppercase;
+        }
+        .logo .bx{
+            font-size: 24px;
+            color: #d6a9a9;
+        }
+
+
+
+        .navbar{
+            display: flex;
+        }
+        .navbar a{
+            padding: 8px 17px;
+            color: #121011;
+            font-size: 1rem;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+        .navbar a:hover{
+            color: #d6a9a9b4;
+        }
+        #menu-icon{
+            font-size: 24px;
+            color: #121011;
+            z-index: 10001;
+            cursor: pointer;
+            display: none;
+        }
+        .header-icon{
+            font-size: 20px;
+            cursor: pointer;
+            z-index: 1000;
+            display: flex;
+            column-gap: 0.8rem;
+            align-items: center;
+        }
+        .header-icon .bx{
+            color: #fff;
+            padding: 7px;
+            background: #d6a9a9;
+            border-radius: 0.9rem;
+        }
+        .header-icon .bx:hover{
+            background: #d6a9a9b4;
+        }
+        .header-icon i{
+            position: relative;
+        }
+        .header-icon span{
+            position: absolute;
+            top: -7px;
+            right: -7px;
+            width: 18px;
+            height: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: #121011;
+            color: #fff;
+            font-size: 0.6rem;
+            font-weight: 500;
+        }
+
+        .search-box{
+            position: relative;
+            width: 200px;
+            box-shadow: 0 0 16px 1px rgb(14 52 54 / 15%);
+        }
+        .search-box input{
+            border: none;
+            outline: none;
+            width: 100%;
+            font-size: 1rem;
+            padding: 0px;
+            color: #d6a9a9;
+        }
+        .search-box input::placeholder{
+            font-size: 1rem;
+            font-weight: 500;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        h1, h2 {
+            font-family: 'Playfair Display', serif;
+            color: var(--secondary-color);
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .product-info {
+            padding: 20px;
+        }
+
+        .product-name {
+            font-size: 1.2em;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .product-price {
+            font-size: 1.1em;
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+
+        .product-description {
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: var(--text-color);
+        }
+
+        .add-to-cart {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: var(--primary-color);
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            margin-top: 15px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .add-to-cart:hover {
+            background-color: var(--secondary-color);
+        }
+
+        /* Footer Styles */
+        footer {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 2rem;
+            padding: 4rem 2rem;
+        }
+
+        .footer-box {
+            padding: 1rem;
+        }
+
+        .footer-box .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.5rem;
+            color: #333;
+            text-decoration: none;
+            margin-bottom: 1rem;
+        }
+
+        .footer-box ul {
+            list-style: none;
+        }
+
+        .footer-box ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-box a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-box a:hover {
+            color: #d6a9a9;
+        }
+
+        .social {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social a i {
+            font-size: 20px;
+            padding: 10px;
+            background: #fff;
+            border-radius: 50%;
+            transition: all 0.3s;
+        }
+
+        .social a i:hover {
+            background: #d6a9a9;
+            color: #fff;
+        }
+
+        .contact-info p {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        @media (max-width: 991px) {
+        header {
+            padding: 20px;
+        }
+
+        .navbar {
+            display: none;
+        }
+
+        .navbar.active {
+            right: 0;
+        }
+
+        .navbar a {
+            display: block;
+            padding: 10px;
+            margin: 5px 0;
+        }
+
+        #menu-icon {
+            display: initial;
+        }
+
+        .search-box {
+            display: none;
+        }
+
+        .home-img,
+        .about-img {
+            margin-top: 40px;
+        }
+
+        .about-img img{
+            width: 100%;
+        }
+
+        ul.navbar {
+            position: absolute;
+            z-index: 200;
+            box-shadow: 2px 2px 0 #BEBEBE;
+            width: 35%;
+            display:none;
+        }
+        
+        ul.navbar li {
+            float: none;
+            margin: 0;
+        }
+        
+        ul.navbar li a {
+            border-bottom: 1px dotted #ccc;
+            border-right: none;
+            color: #000;
+            padding: 15px 30px;
+        }
+        
+        ul.navbar li a:hover {
+            color: #d6a9a9;
+            background: #eeeeee;
+        }
+        
+        /* sub display*/
+        ul.primary li:hover ul {
+            display: block;
+            background: #fff;
+        }
+
+
+        .footer {
+            grid-template-columns: 1fr;
+            text-align: center;
+        }
+
+        .social {
+            justify-content: center;
+        }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><i class='bx bxs-shopping-bag'></i>Elegant Creations</a>
+        <div class="wrap">
+            <span class="decor"></span>
+            <nav>
+                <ul class="primary">
+                    <li>
+                        <a href="#"><i class='bx bx-menu' id="menu-icon"></i></a>
+                        <ul class="navbar">
+                            <li><a href="index.html">Accueil</a></li>
+                            <li><a href="produits.html">Produits</a></li>
+                            <li><a href="A propos de nous.html">À propos de nous</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="search-box">
+            <input type="search" placeholder="Rechercher...">
+        </div>
+        <div class="header-icon">
+            <i class='bx bx-search'></i>
+            <i class='bx bxs-cart-alt'><span>0</span></i>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Nos Produits</h1>
+        <div class="products-grid">
+            <div class="product-card">
+                <img src="images/Sac a main cuir marron.jpg" alt="Sac à main en cuir marron" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-name">Sac à main en cuir marron</h2>
+                    <p class="product-price">1200 MAD</p>
+                    <p class="product-description">Élégant sac à main en cuir véritable, parfait pour un usage quotidien.</p>
+                    <button class="add-to-cart">Ajouter au panier</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="images/Pochette de soiree doree.jpg" alt="Pochette de soirée dorée" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-name">Pochette de soirée dorée</h2>
+                    <p class="product-price">800 MAD</p>
+                    <p class="product-description">Pochette élégante pour vos soirées spéciales.</p>
+                    <button class="add-to-cart">Ajouter au panier</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="images/sac bandouliere en cuir noir.jpg" alt="Sac bandoulière en cuir noir" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-name">Sac bandoulière en cuir noir</h2>
+                    <p class="product-price">950 MAD</p>
+                    <p class="product-description">Sac bandoulière pratique et élégant pour un look décontracté.</p>
+                    <button class="add-to-cart">Ajouter au panier</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="images/sac a dos en cuir caramel.jpg" alt="Sac à dos en cuir camel" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-name">Sac à dos en cuir camel</h2>
+                    <p class="product-price">1500 MAD</p>
+                    <p class="product-description">Sac à dos spacieux et élégant pour un usage quotidien ou pour voyager.</p>
+                    <button class="add-to-cart">Ajouter au panier</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="images/mini sac a main rouge.jpg" alt="Mini sac à main rouge" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-name">Mini sac à main rouge</h2>
+                    <p class="product-price">700 MAD</p>
+                    <p class="product-description">Petit sac à main coloré pour ajouter une touche de couleur à votre tenue.</p>
+                    <button class="add-to-cart">Ajouter au panier</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="images/Grand sac four en toile.jpg" alt="Sac fourre-tout en toile" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-name">Sac fourre-tout en toile</h2>
+                    <p class="product-price">600 MAD</p>
+                    <p class="product-description">Grand sac fourre-tout en toile, idéal pour les courses ou la plage.</p>
+                    <button class="add-to-cart">Ajouter au panier</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="images/Sac de voyage en cuir.jpg" alt="Sac de voyage en cuir" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-name">Sac de voyage en cuir</h2>
+                    <p class="product-price">2500 MAD</p>
+                    <p class="product-description">Grand sac de voyage en cuir robuste, parfait pour les week-ends.</p>
+                    <button class="add-to-cart">Ajouter au panier</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="images/Porte monnaie en cuir.jpg" alt="Porte-monnaie en cuir" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-name">Porte-monnaie en cuir</h2>
+                    <p class="product-price">400 MAD</p>
+                    <p class="product-description">Petit porte-monnaie en cuir pratique pour ranger vos cartes et votre monnaie.</p>
+                    <button class="add-to-cart">Ajouter au panier</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="images/Sac a main en daim.jpg" alt="Sac à main en daim" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-name">Sac à main en daim</h2>
+                    <p class="product-price">1100 MAD</p>
+                    <p class="product-description">Sac à main élégant en daim doux, disponible en plusieurs couleurs.</p>
+                    <button class="add-to-cart">Ajouter au panier</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="images/Sac a dos en toile.jpg" alt="Sac à dos en toile" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-name">Sac à dos en toile</h2>
+                    <p class="product-price">850 MAD</p>
+                    <p class="product-description">Sac à dos léger et durable en toile, parfait pour un usage quotidien.</p>
+                    <button class="add-to-cart">Ajouter au panier</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="images/Sac a main en cuir tresse.avif" alt="Sac à main en cuir tressé" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-name">Sac à main en cuir tressé</h2>
+                    <p class="product-price">1300 MAD</p>
+                    <p class="product-description">Sac à main élégant avec un motif tressé unique.</p>
+                    <button class="add-to-cart">Ajouter au panier</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="images/Pochette en cuir verni.jpg" alt="Pochette en cuir verni" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-name">Pochette en cuir verni</h2>
+                    <p class="product-price">750 MAD</p>
+                    <p class="product-description">Pochette élégante en cuir verni, parfaite pour les soirées chic.</p>
+                    <button class="add-to-cart">Ajouter au panier</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="images/Sac cabas en cuir.jpg" alt="Sac cabas en cuir" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-name">Sac cabas en cuir</h2>
+                    <p class="product-price">1400 MAD</p>
+                    <p class="product-description">Grand sac cabas en cuir souple, idéal pour le travail ou les courses.</p>
+                    <button class="add-to-cart">Ajouter au panier</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="images/Sac a bandouliere en cuir tresse.jpg" alt="Sac à bandoulière en cuir tressé" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-name">Sac à bandoulière en cuir tressé</h2>
+                    <p class="product-price">1050 MAD</p>
+                    <p class="product-description">Sac à bandoulière élégant avec un motif tressé unique et une finition luxueuse.</p>
+                    <button class="add-to-cart">Ajouter au panier</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="images/Pochette en velours.jpg" alt="Pochette en velours" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-name">Pochette en velours</h2>
+                    <p class="product-price">650 MAD</p>
+                    <p class="product-description">Pochette élégante en velours doux, parfaite pour les soirées.</p>
+                    <button class="add-to-cart">Ajouter au panier</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="images/Sac a dos en cuir vintage.jpg" alt="Sac à dos en cuir vintage" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-name">Sac à dos en cuir vintage</h2>
+                    <p class="product-price">1600 MAD</p>
+                    <p class="product-description">Sac à dos en cuir au style vintage, parfait pour un look rétro chic.</p>
+                    <button class="add-to-cart">Ajouter au panier</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="images/Sac hobo en cuir souple.jpg" alt="Sac hobo en cuir souple" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-name">Sac hobo en cuir souple</h2>
+                    <p class="product-price">1150 MAD</p>
+                    <p class="product-description">Sac hobo en cuir souple au design décontracté et élégant.</p>
+                    <button class="add-to-cart">Ajouter au panier</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="images/Sac bowling en cuir.jpg" alt="Sac bowling en cuir" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-name">Sac bowling en cuir</h2>
+                    <p class="product-price">1350 MAD</p>
+                    <p class="product-description">Sac bowling en cuir au design classique et intemporel.</p>
+                    <button class="add-to-cart">Ajouter au panier</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="images/Sac week-end en toile et cuir.jpg" alt="Sac week-end en toile et cuir" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-name">Sac week-end en toile et cuir</h2>
+                    <p class="product-price">1800 MAD</p>
+                    <p class="product-description">Sac de voyage spacieux en toile et cuir, idéal pour les courts séjours.</p>
+                    <button class="add-to-cart">Ajouter au panier</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="images/Portfeuille long en cuir.jpg" alt="Portefeuille long en cuir" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-name">Portefeuille long en cuir</h2>
+                    <p class="product-price">550 MAD</p>
+                    <p class="product-description">Portefeuille long en cuir avec de nombreux compartiments pour une organisation optimale.</p>
+                    <button class="add-to-cart">Ajouter au panier</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="images/Sac seau en cuir.jpg" alt="Sac seau en cuir" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-name">Sac seau en cuir</h2>
+                    <p class="product-price">1050 MAD</p>
+                    <p class="product-description">Sac seau tendance en cuir souple avec fermeture à cordon.</p>
+                    <button class="add-to-cart">Ajouter au panier</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="images/Sac à dos en toile pour ordinateur portable.jpg" alt="Sac à dos en toile pour ordinateur portable" class="product-image">
+                <div class="product-info">
+                    <h2 class="product-name">Sac à dos en toile pour ordinateur portable</h2>
+                    <p class="product-price">1050 MAD</p>
+                    <p class="product-description">Sac à dos élégant en toile avec compartiment rembourré pour ordinateur portable.</p>
+                    <button class="add-to-cart">Ajouter au panier</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-box">
+            <a href="#" class="logo">
+                <i class='bx bxs-shopping-bag'></i>
+                Elegant Creations
+            </a>
+            <p>Votre destination pour des sacs à main élégants et raffinés.</p>
+            <div class="social">
+                <a href="#"><i class='bx bxl-facebook'></i></a>
+                <a href="#"><i class='bx bxl-twitter'></i></a>
+                <a href="#"><i class='bx bxl-instagram'></i></a>
+                <a href="#"><i class='bx bxl-youtube'></i></a>
+            </div>
+        </div>
+        <div class="footer-box">
+            <h3>Support</h3>
+            <ul>
+                <li><a href="produits.html">Produits</a></li>
+                <li><a href="Aide.html">Aide</a></li>
+                <li><a href="politiques-de-retour.html">Politique de retour</a></li>
+                <li><a href="conditions-utilisation.html">Conditions d'utilisation</a></li>
+            </ul>
+        </div>
+        <div class="footer-box">
+            <h3>Consulter les guides</h3>
+            <ul>
+                <li><a href="payment2.html">Paiements</a></li>
+                <li><a href="blogs.html">Nos blogs</a></li>
+                <li><a href="partenaires.html">Nos partenaires</a></li>
+                <li><a href="Achetez maintenent.html">Achetez maintenant</a></li>
+            </ul>
+        </div>
+        <div class="footer-box contact-info">
+            <h3>Contact</h3>
+            <p><i class='bx bxs-map'></i>123 Rue de la Mode, Casablanca</p>
+            <p><i class='bx bxs-phone'></i>+212 7 23 45 67 89</p>
+            <p><i class='bx bxs-envelope'></i>bag@elegantcreations.com</p>
+        </div>
+    </footer>
+</body>
+</html>
